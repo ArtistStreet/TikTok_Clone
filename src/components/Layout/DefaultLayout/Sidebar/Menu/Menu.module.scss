@@ -1,0 +1,238 @@
+.menu-item {
+    display: flex;
+    color: var(--default-text-color);
+    gap: 0.8rem;
+    text-decoration: none;
+    align-items: center;
+    height: 1.9rem;
+
+    &.active {
+        color: var(--primary);
+    }
+}
+
+// .menu-item-active {
+//     display: flex;
+//     color: var(--default-text-color);
+//     text-decoration: none;
+//     align-items: center;
+//     height: 42px;
+//     width: 42px;
+
+//     &.active {
+//         color: var(--primary);
+//     }
+// }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    a {
+        border-radius: 6px;
+
+        // height: 2.3rem;
+        &:hover {
+            background-color: var(--hover-color);
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out;
+        }
+    }
+
+    img {
+        width: 1.2rem;
+        height: 1.2rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-inline-start: 0.35rem;
+
+    }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--default-text-color);
+}
+
+.clear,
+.search-clear,
+.spinner-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--search-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 0;
+    color: white;
+}
+
+.search-clear,
+.spinner-icon {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+}
+
+.clear:hover {
+    background-color: var(--hover-color);
+}
+
+.clear-icon,
+.loading-icon {
+    color: #fff;
+    // font-size: 18px;
+}
+
+.loading-icon {
+    animation: spinner 0.5s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.search-input {
+    position: relative;
+    display: flex;
+    width: 302px;
+    height: 41px;
+    padding: 10px 4px 10px 16px;
+    background-color: var(--search-color);
+    border-radius: 999px;
+}
+
+.input {
+    cursor: text;
+    background-color: transparent;
+    color: var(--default-text-color);
+    font-size: 14px;
+    width: 242px;
+}
+
+.search {
+    margin: 15px 8px;
+
+
+    h4 {
+        font-size: 14px; // Adjust the size as needed
+        font-weight: 500; // Optional: Adjust the weight for better appearance
+        color: var(--text-color); // Ensure consistent color
+    }
+}
+
+.accounts {
+    padding: 5px 12px;
+}
+
+.wrapper-account-item {
+    display: flex;
+    padding: 9px 8px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        background-color: rgb(18, 18, 18);
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .info {
+        flex: 1;
+        margin-left: 12px;
+        line-height: 0.5;
+    }
+
+    h4 {
+        // font-size: 16px;
+        font-weight: 500;
+        color: var(--default-text-color);
+    }
+
+    span {
+        font-size: 14px;
+        // font-weight: 500;
+        color: var(--text-color);
+    }
+}
+
+// .more-container {
+//     // padding: 1rem; // Add padding for better spacing
+//     // border-radius: 8px; // Optional: Add rounded corners
+//     // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Optional: Add a shadow for better visibility
+//     // transition: background-color 0.3s ease; // Smooth transition for hover effects
+
+//     // &.active {
+//     //     background-color: var(--hover-color); // Change background when active
+//     // }
+//     // list-style-type: none;
+// }
+
+.more-content {
+    list-style-type: none;
+    color: var(--default-text-color); // Ensure consistent text color
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    li {
+        font-size: 16px;
+        height: 40px;
+        display: inherit;
+        align-items: center;
+        cursor: pointer;
+        padding: 16px 8px;
+        border-radius: 999px;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: var(--hover-color);
+        }
+    }
+}
+
+// MoreHeader
+
+.more-header {
+    position: relative;
+    display: flex;
+    height: 78px;
+    align-items: center;
+}
+
+.back {
+    background-color: var(--hover-color);
+    height: 24px;
+    width: 24px;
+    color: var(--default-text-color);
+    border-radius: 50%;
+}
+
+.more-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}

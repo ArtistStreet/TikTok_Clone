@@ -1,0 +1,38 @@
+.wrapper {
+    // background-color: red;
+    border-radius: 6px;
+    // background-color: rgb(122, 122, 122);
+    padding: 20px;
+    background-color: var(--search-color);
+    min-width: 320px;
+}
+
+img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-inline-start: 0.35rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    margin-top: 12px;
+}
+
+.anal {
+    margin-top: 10px;
+}
+
+.bold + .bold {
+    margin-left: 20px;
+}
+
+.name {
+    font-weight: 400;
+}
